@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+  <title>목동 노래방 추천 가이드</title>
+  <rect width="64" height="64" rx="13" fill="hsl(341 66% 20%)"/>
+  <g transform="rotate(270 32 32)"><path d="M32 12 52 32 32 52 12 32Z" fill="none" stroke="hsl(341 24% 96%)" stroke-width="7" stroke-linejoin="round"/><path d="M32 24 40 32 32 40 24 32Z" fill="hsl(136 68% 68%)"/></g>
+</svg>
