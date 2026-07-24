@@ -1,199 +1,664 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목동 노래방 추천 가이드 — 처음 방문자를 위한 조건별 선택 안내</title>
+    <meta name="description" content="목동 지역 노래방의 다양한 형태를 비교하고, 인원수·예산·시설에 맞는 최적의 장소를 찾는 방법과 꼭 확인해야 할 체크리스트를 제공합니다.">
+    <meta name="keywords" content="목동 노래방, 목동 노래방 추천, 목동 노래방 가이드, 목동 노래방 비교, 목동 노래방 조건별 추천">
+    <link rel="canonical" href="https://mokdong-karaoke-note.nonhyeonnight.xyz/">
+    <meta property="og:title" content="목동 노래방 추천 가이드 — 조건별 선택 안내">
+    <meta property="og:description" content="목동 지역 노래방 비교 및 선택을 위한 종합 가이드입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mokdong-karaoke-note.nonhyeonnight.xyz/">
+    <meta property="og:site_name" content="목동 노래방 추천 가이드">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="목동 노래방 추천 가이드">
+    <meta name="twitter:description" content="목동 지역 노래방 비교 및 선택을 위한 종합 가이드입니다.">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-night-teal">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "목동 노래방 추천 가이드",
+      "url": "https://mokdong-karaoke-note.nonhyeonnight.xyz/",
+      "description": "목동 지역 노래방 비교 및 선택을 위한 종합 가이드입니다.",
+      "author": {
+        "@type": "Person",
+        "name": "한동환"
+      }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "목동에서 주차하기 편한 노래방은 어디인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "주차 여부는 노래방마다 다르므로, 꼭 사전에 확인해야 합니다. 일반적으로 건물 자체 주차장을 갖춘 곳은 접근성이 좋습니다. 리뷰를 보실 때 '주차 편하다'는 키워드를 눈여겨보시는 게 가장 확실합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "10명 이상 큰 인원이 이용할 수 있는 노래방이 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "목동에도 대형 룸을 보유한 노래방이 있습니다. 예약 페이지나 설명에서 '대형룸', '20인실' 같은 표현을 찾아보시거나, 전화 문의 시 인원을 정확히 말씀하시는 것이 좋습니다. 성수기에는 미리 예약하는 것을 추천합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "노래방 선택 시 가장 중요한 것은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "가장 중요한 것은 '방문 목적'입니다. 친구들과의 모임이라면 음향 시설과 룸 분위기를, 가족 모임이라면 청결함과 편의 시설을 중점적으로 보는 것이 좋습니다. 본 가이드의 선택 기준을 참고하시면 나에게 맞는 곳을 찾는 데 도움이 됩니다."
+          }
+        }
+      ]
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        :root {
+            --primary: #080f0f;
+            --secondary: #f0f5f5;
+            --accent: #00c8a0;
+            --font-heading: 'Barlow Condensed', sans-serif;
+            --font-body: 'Noto Sans KR', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            gap: 16px;
+            padding: 24px;
+            background-image:
+                linear-gradient(rgba(0, 200, 160, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 200, 160, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .t-hero-3qgs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .v-grid-ac3c {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+        }
+
+        .t-nav-16ej {
+            display: flex;
+            gap: 24px;
+        }
+
+        .t-nav-16ej a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .t-nav-16ej a:hover {
+            color: var(--accent);
+        }
+
+        .k-btn-z416 {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .k-btn-z416 span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--secondary);
+            margin-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .k-wrap-i0to {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .q-head-nez1-badge {
+            background-color: var(--accent);
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-weight: 800;
+            padding: 8px 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        .k-wrap-i0to h1 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(3rem, 6vw, 5rem);
+            text-transform: uppercase;
+            line-height: 0.95;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .k-wrap-i0to h1 span {
+            display: block;
+            color: var(--accent);
+        }
+
+        .k-wrap-i0to p {
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin-bottom: 32px;
+            color: rgba(240, 245, 245, 0.8);
+        }
+
+        .v-main-404r-cells {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .n-body-2tdx {
+            border-left: 3px solid var(--accent);
+            padding-left: 16px;
+        }
+
+        .n-body-2tdx-title {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .n-body-2tdx-value {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .x-grid-q6fs-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .x-grid-q6fs-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 8px;
+            background-color: var(--accent);
+        }
+
+        .r-item-0rgr {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .n-card-rqh5 {
+            background: rgba(0, 200, 160, 0.05);
+            padding: 24px;
+            border: 1px solid rgba(0, 200, 160, 0.2);
+        }
+
+        .n-card-rqh5-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .n-card-rqh5 h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .n-card-rqh5 p {
+            font-size: 0.95rem;
+            color: rgba(240, 245, 245, 0.7);
+            line-height: 1.5;
+        }
+
+        .r-ico-gqf3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .k-head-seu7 {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .k-head-seu7::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: var(--accent);
+        }
+
+        .k-head-seu7-item {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .k-head-seu7-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+        }
+
+        .k-head-seu7-item h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .t-list-i5gh {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+        }
+
+        .m-top-88x6 {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-heading);
+        }
+
+        .m-top-88x6 th, .m-top-88x6 td {
+            border: 1px solid rgba(0, 200, 160, 0.3);
+            padding: 16px;
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .m-top-88x6 th {
+            background-color: rgba(0, 200, 160, 0.1);
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .q-item-ss4z {
+            border-left: 8px solid var(--accent);
+            padding: 24px;
+            background: rgba(0, 200, 160, 0.05);
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .q-item-ss4z p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .q-item-ss4z cite {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-style: normal;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .x-body-aqu9 {
+            margin-bottom: 60px;
+        }
+
+        .x-body-aqu9-item {
+            border-bottom: 1px solid rgba(0, 200, 160, 0.2);
+            padding: 24px 0;
+        }
+
+        .x-body-aqu9-item h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .r-ico-vja5 {
+            padding: 40px 0;
+            border-top: 1px solid rgba(0, 200, 160, 0.3);
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .r-ico-vja5-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .r-ico-vja5-info h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .r-ico-vja5-info p {
+            color: rgba(240, 245, 245, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .m-main-43sn {
+            padding: 40px 0 0 0;
+            border-top: 2px solid var(--accent);
+            margin-top: 24px;
+            text-align: center;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: rgba(240, 245, 245, 0.5);
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .k-wrap-i0to {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .k-btn-z416 {
+                display: flex;
+            }
+
+            .t-nav-16ej {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary);
+                border: 2px solid var(--accent);
+                padding: 16px;
+                flex-direction: column;
+                width: 200px;
+            }
+
+            .t-nav-16ej.active {
+                display: flex;
+            }
+
+            .r-item-0rgr {
+                grid-template-columns: 1fr;
+            }
+
+            .r-ico-gqf3 {
+                grid-template-columns: 1fr;
+            }
+
+            .t-list-i5gh {
+                grid-template-columns: 1fr;
+            }
+
+            .k-wrap-i0to h1 {
+                font-size: 3rem;
+            }
+
+            .v-main-404r-cells {
+                grid-template-columns: 1fr;
+            }
+
+            .x-grid-q6fs-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+    <nav class="t-hero-3qgs">
+        <div class="v-grid-ac3c">MOKDONG KARAOKE GUIDE</div>
+        <div class="t-nav-16ej">
+            <a href="#criteria">선택 기준</a>
+            <a href="#checklist">확인사항</a>
+            <a href="#faq">FAQ</a>
         </div>
-      </div>
+        <div class="k-btn-z416" onclick="document.querySelector('.t-nav-16ej').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="k-wrap-i0to">
+        <div>
+            <div class="q-head-nez1-badge">Route: Mokdong-Karaoke</div>
+            <h1>목동 노래방<br><span>추천 가이드</span></h1>
+            <p>목동의 다양한 노래방을 단순히 나열하는 것이 아닙니다. 당신의 방문 목적, 인원, 예산에 맞춰 최적의 '정차역'을 찾는 실용적인 노선도를 제안합니다. 더 이상 감으로 선택하지 마세요.</p>
+        </div>
+        <div class="v-main-404r-cells">
+            <div class="n-body-2tdx">
+                <div class="n-body-2tdx-title">주요 지역</div>
+                <div class="n-body-2tdx-value">목동</div>
+            </div>
+            <div class="n-body-2tdx">
+                <div class="n-body-2tdx-title">핵심 키워드</div>
+                <div class="n-body-2tdx-value">추천 가이드</div>
+            </div>
+            <div class="n-body-2tdx">
+                <div class="n-body-2tdx-title">작성 목적</div>
+                <div class="n-body-2tdx-value">조건별 비교</div>
+            </div>
+            <div class="n-body-2tdx">
+                <div class="n-body-2tdx-title">대상 독자</div>
+                <div class="n-body-2tdx-value">방문 예정자</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="criteria">
+            <h2 class="x-grid-q6fs-title">선택 기준 4가지</h2>
+            <div class="r-item-0rgr">
+                <div class="n-card-rqh5">
+                    <div class="n-card-rqh5-icon">인</div>
+                    <h3>인원수</h3>
+                    <p>소규모(2~4명)부터 대규모(10명 이상)까지, 룸의 크기와 형태가 크게 좌우합니다. 예약 페이지의 '인원' 기준을 꼭 확인하세요.</p>
+                </div>
+                <div class="n-card-rqh5">
+                    <div class="n-card-rqh5-icon">예</div>
+                    <h3>예산</h3>
+                    <p>이용 시간, 음료·안주 포함 여부, 주말·공휴일 할증 등에 따라 최종 가격이 달라집니다. '이용 요금'을 꼼꼼히 비교해야 합니다.</p>
+                </div>
+                <div class="n-card-rqh5">
+                    <div class="n-card-rqh5-icon">편</div>
+                    <h3>편의 시설</h3>
+                    <p>주차 가능 여부, 룸 내 좌식·입식 여부, 흡연 가능 구역 유무는 접근성과 쾌적함에 직접적인 영향을 줍니다.</p>
+                </div>
+                <div class="n-card-rqh5">
+                    <div class="n-card-rqh5-icon">음</div>
+                    <h3>음향·곡</h3>
+                    <p>최신 음향 시설과 최신곡 업데이트 속도는 노래방 선택의 핵심입니다. 인터넷 리뷰나 공식 SNS에서 곡 업데이트 주기를 확인해 보세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist">
+            <h2 class="x-grid-q6fs-title">이용 전 확인사항</h2>
+            <div class="r-ico-gqf3">
+                <div class="k-head-seu7">
+                    <div class="k-head-seu7-item">
+                        <h3>예약 또는 방문</h3>
+                        <p>대기 시간을 줄이려면 예약을 추천합니다. 특히 주말 저녁은 꽉 차는 경우가 많아요. 예약 가능 여부는 전화나 온라인으로 미리 체크하세요.</p>
+                    </div>
+                    <div class="k-head-seu7-item">
+                        <h3>이용 요금 확인</h3>
+                        <p>시간당 요금인지, 봉사료는 포함인지, 추가 과금 조건은 없는지 계산해 보세요. 사전에 총 예상 비용을 파악하는 것이 좋습니다.</p>
+                    </div>
+                    <div class="k-head-seu7-item">
+                        <h3>부가 시설 확인</h3>
+                        <p>주차장 유무, 룸 크기(좌식/입식), 흡연실 여부 등은 방문 전에 반드시 체크하는 게 좋아요. 특히 주차는 핵심 사항입니다.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="q-item-ss4z">
+                        <p>"노래방 선택은 단순히 노래를 부르는 장소를 고르는 일이 아닙니다. 함께할 사람, 그날의 분위기, 지갑 사정을 종합적으로 고려한 '여정 계획'과 같습니다."</p>
+                        <cite>- 목동 지역 정보 정리 7년차 가이드, 한동환</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="x-grid-q6fs-title">조건별 적합성 비교</h2>
+            <div class="t-list-i5gh">
+                <table class="m-top-88x6">
+                    <thead>
+                        <tr>
+                            <th>조건</th>
+                            <th>A 유형 (소규모 감성)</th>
+                            <th>B 유형 (대규모 시설)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>인원</td>
+                            <td>2~4명</td>
+                            <td>8~15명</td>
+                        </tr>
+                        <tr>
+                            <td>룸 형태</td>
+                            <td>소형, 좌식 위주</td>
+                            <td>대형, 입식 위주</td>
+                        </tr>
+                        <tr>
+                            <td>예상 요금</td>
+                            <td>시간당 저렴~중간</td>
+                            <td>시간당 중간~높음</td>
+                        </tr>
+                        <tr>
+                            <td>추천 상황</td>
+                            <td>연인, 소수 친구 모임</td>
+                            <td>회식, 동호회, 파티</td>
+                        </tr>
+                        <tr>
+                            <td>주요 장점</td>
+                            <td>아늑함, 합리적 가격</td>
+                            <td>쾌적함, 다양한 부대시설</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="q-item-ss4z">
+                    <p>"같은 '노래방'이라도 목적에 따라 선택은 완전히 달라집니다. '누구와' 가느냐가 어떤 유형을 선택할지 결정하는 가장 큰 요소예요."</p>
+                    <cite>- 현장 경험 기반 조언</cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="x-body-aqu9">
+            <h2 class="x-grid-q6fs-title">자주 묻는 질문</h2>
+            <div class="x-body-aqu9-item">
+                <h3>Q. 목동에서 주차하기 편한 노래방은 어디인가요?</h3>
+                <p>A. 주차 여부는 노래방마다 다르므로, 꼭 사전에 확인해야 합니다. 일반적으로 건물 자체 주차장을 갖춘 곳은 접근성이 좋습니다. 리뷰를 보실 때 '주차 편하다'는 키워드를 눈여겨보시는 게 가장 확실합니다.</p>
+            </div>
+            <div class="x-body-aqu9-item">
+                <h3>Q. 10명 이상 큰 인원이 이용할 수 있는 노래방이 있나요?</h3>
+                <p>A. 목동에도 대형 룸을 보유한 노래방이 있습니다. 예약 페이지나 설명에서 '대형룸', '20인실' 같은 표현을 찾아보시거나, 전화 문의 시 인원을 정확히 말씀하시는 것이 좋습니다. 성수기에는 미리 예약하는 것을 추천합니다.</p>
+            </div>
+            <div class="x-body-aqu9-item">
+                <h3>Q. 노래방 선택 시 가장 중요한 것은 무엇인가요?</h3>
+                <p>A. 가장 중요한 것은 '방문 목적'입니다. 친구들과의 모임이라면 음향 시설과 룸 분위기를, 가족 모임이라면 청결함과 편의 시설을 중점적으로 보는 것이 좋습니다. 본 가이드의 선택 기준을 참고하시면 나에게 맞는 곳을 찾는 데 도움이 됩니다.</p>
+            </div>
+        </section>
+
+        <div class="r-ico-vja5">
+            <div class="r-ico-vja5-avatar">한</div>
+            <div class="r-ico-vja5-info">
+                <h4>한동환</h4>
+                <p>서울 서부 지역 유흥 시설과 문화 공간에 대한 정보를 7년간 정리해온 로컬 가이드입니다. 실제 방문 기반의 실용적인 정보 전달을 목표로 하고 있습니다.</p>
+            </div>
+        </div>
     </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+
+    <footer class="m-main-43sn">
+        <p>© 2024 MOKDONG KARAOKE GUIDE. ALL RIGHTS RESERVED.</p>
     </footer>
-  </div>
 </body>
 </html>
